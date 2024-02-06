@@ -139,7 +139,7 @@ module QRGenerator
     payload += "\r\n"
     payload += "\r\n"
     payload += "\r\n"
-    payload += "#{format('%.2f', bill_params[:amount])}\r\n"
+    payload += "#{format('%.2f', bill_params[:amount]) if bill_params[:amount].present?}\r\n"
     payload += "#{bill_params[:currency]}\r\n"
     payload += "#{bill_params[:debtor][:address][:type]}\r\n"
     payload += "#{bill_params[:debtor][:address][:name]}\r\n"
